@@ -1,0 +1,146 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.skillMatrix {
+  background-color: #f8f9fa;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  .header {
+    margin-bottom: 20px;
+    
+    .title {
+      background-color: #1e88e5;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+  .tableContainer {
+    background-color: white;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+  }
+
+  .skillTable {
+    width: 100%;
+    border-collapse: collapse;
+    
+    th {
+      background-color: #1976d2;
+      color: white;
+      padding: 12px 8px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      border: 1px solid #1565c0;
+      white-space: nowrap;
+      
+      &:first-child {
+        border-left: none;
+      }
+      
+      &:last-child {
+        border-right: none;
+      }
+    }
+    
+    td {
+      padding: 12px 8px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      font-size: 13px;
+      background-color: white;
+      
+      &:first-child {
+        border-left: none;
+      }
+      
+      &:last-child {
+        border-right: none;
+      }
+      
+      a {
+        color: #1976d2;
+        text-decoration: none;
+        font-weight: 500;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    tr:nth-child(even) td {
+      background-color: #f8f9fa;
+    }
+    
+    tr:hover td {
+      background-color: #e3f2fd;
+    }
+  }
+
+  .noData {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 40px !important;
+  }
+
+  .loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .refreshContainer {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .refreshButton {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    
+    &:hover:not(:disabled) {
+      background-color: #1565c0;
+    }
+    
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .skillMatrix {
+    padding: 10px;
+    
+    .skillTable {
+      font-size: 12px;
+      
+      th, td {
+        padding: 8px 4px;
+      }
+    }
+  }
+}
