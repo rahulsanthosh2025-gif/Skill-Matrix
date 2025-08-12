@@ -1,0 +1,40 @@
+.skillMatrix {
+  .header {
+    background-color: #0078d4; // Classic SharePoint blue
+    color: #fff;
+    padding: 8px;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      tr {
+        th {
+          background-color: #0078d4;
+          color: #fff;
+          padding: 6px 4px;
+          text-align: left;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #f3f9fd;
+        }
+
+        td {
+          padding: 6px 4px;
+          border-bottom: 1px solid #c8c8c8;
+        }
+      }
+    }
+  }
+}
